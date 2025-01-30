@@ -63,8 +63,18 @@
         if(r){
           document.location.replace(r);
         }
+        else {
+          document.body.innerHTML = '<h1>404 - Page Not Found</h1>';
+          document.body.style.textAlign = 'center';
+          document.body.style.marginTop = '20%';
+        }
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        document.body.innerHTML = '<h1>404 - Page Not Found</h1>';
+        document.body.style.textAlign = 'center';
+        document.body.style.marginTop = '20%';
+        console.log(err)
+      })
     }
 
   </script>
